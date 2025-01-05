@@ -1,0 +1,26 @@
+@startuml
+class RbmqClinet{
+    pika.adapters.tornado_connection.TornadoConnection
+    queues = set()
+    ==
+    open_connect() etc
+    start_json_consumer()
+    create_queue()
+}
+note left of RbmqClinet::queues
+    only record queue names of rabbimq 
+end note 
+
+note left of RbmqClinet::start_json_consumer
+    use pika.basic_consume,ack to create a 
+    worker in given rabbitmq queue.In this 
+    situation every queue create a worker 
+    for response any event/message of json.
+    actually can run py code.
+end note
+
+note left of RbmqClinet::create_queue
+    use pika.basic_declare,qos create queue
+end note
+
+@enduml

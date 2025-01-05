@@ -1,0 +1,23 @@
+@startuml In Tornado Layer 
+ClientDescriptor o-- EventQueue
+UserProfile -- ClientDescriptor
+class EventQueue{
+    id:int
+    queue:deque()
+    queuehead:newest_pruned_id
+    queuetail:next_event_id
+    ==
+    push()
+    pop()
+    prune()
+}
+class ClientDescriptor{
+    user profile id
+    event_queue id
+    ==
+    add_event()
+}
+class UserProfile{
+    user id 
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml 
+class A {
+{static} int counter
+vscode 中 的 plantuml 中 文 
+预 览 会 重 叠
+}
+note left of A::counter
+  去 它 官 方 服 务 器 
+  生 成 就 好 了 ， 网
+  上 没 有 相 同 情 况
+end note
+@enduml

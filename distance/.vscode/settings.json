@@ -1,0 +1,8 @@
+{   
+    "python.analysis.extraPaths": 
+        ["${workspaceFolder}/sample/",
+        ],
+    "plantuml.commandArgs": [        
+        "-Dfile.encoding=UTF-8", //无效，预览显示中文字符会重叠
+    ],    
+}
